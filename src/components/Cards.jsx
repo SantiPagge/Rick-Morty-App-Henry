@@ -1,6 +1,7 @@
 import Card from './Card';
+// import characters, { Rick } from './data.js'
 
-function Cards({characters}) {
+function Cards({characters, onClose}) {
 
    return (
    <div> {
@@ -11,7 +12,7 @@ function Cards({characters}) {
          species = {species}
          gender = {gender}
          image = {image}
-         onClose = {() => alert("Emulamos que se cierra la card")}
+         onClose = {() => onClose(id)}
          />
       }
    )}
