@@ -13,6 +13,7 @@ function Cards({characters, onClose}) {
          gender = {gender}
          image = {image}
          onClose = {() => onClose(id)}
+         id={id}
          />
       }
    )}
