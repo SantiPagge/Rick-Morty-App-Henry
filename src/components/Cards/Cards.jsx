@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from '../Card/Card';
 // import characters, { Rick } from './data.js'
 
 function Cards({characters, onClose}) {
