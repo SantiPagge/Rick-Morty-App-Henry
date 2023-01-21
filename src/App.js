@@ -21,7 +21,7 @@ function App () {
   const login = (userData) => {
     if (userData.username === username && userData.password === password){
       setAccess(true)
-      navigate("/home")
+      navigate("/home");
     }
   }
 
@@ -36,7 +36,7 @@ function App () {
        if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]);
        } else {
-          window.alert('No hay personajes con ese ID');
+          alert('No hay personajes con ese ID');
        }
     });
   }
@@ -49,8 +49,7 @@ function App () {
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      {location.pathname === "/" ? <Form login={login}/> : <Nav/>}
-      {/* <Nav onSearch={onSearch}/> */}
+      {location.pathname === "/" ? <Form login={login}/> : <Nav onSearch={onSearch}/>}
       <Routes>
         <Route path='/home' element={<Cards onClose={onClose} characters={characters}/>} />
         <Route path='/about' element={<About/>} />
