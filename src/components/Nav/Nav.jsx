@@ -5,7 +5,7 @@ const Nav = ({onSearch}) => {
     return(
         <nav>
             <div>  
-                <Link to="/home">Log Out</Link>
+                <Link to="/">Log Out</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/home'>Home</Link>
             </div>
