@@ -2,6 +2,7 @@ const http = require("http");
 const characters = require("../utils/data")
 
 http.createServer((req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
 
     if(req.url.includes("rickandmorty/character")){
         let id = req.url.split("/").at(-1);
@@ -12,7 +13,7 @@ http.createServer((req, res) => {
         res.writeHead(200, {"Content-type":"application/json"}).end(JSON.stringify(characterFilter)) 
         // la info viaja en formato JSON asi que hay que parsearla, con JSON.stringify()
 
-        
+
     }
 
 }).listen(3001, "localhost")
