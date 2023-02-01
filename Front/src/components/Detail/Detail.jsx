@@ -17,7 +17,7 @@ const Detail = () => {
             }
           })
           .catch((err) => {
-            window.alert("No hay personajes con ese ID");
+            alert("No hay personajes con ese ID");
           });
         return setCharacter({});
       }, [detailId]);
