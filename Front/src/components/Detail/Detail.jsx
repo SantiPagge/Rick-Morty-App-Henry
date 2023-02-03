@@ -7,20 +7,20 @@ const Detail = () => {
     const [character, setCharacter] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
-          .then((response) => response.json())
-          .then((char) => {
-            if (char.name) {
-              setCharacter(char);
-            } else {
-              window.alert("No hay personajes con ese ID");
-            }
-          })
-          .catch((err) => {
+      fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+        .then((response) => response.json())
+        .then((char) => {
+          if (char.name) {
+            setCharacter(char);
+          } else {
             alert("No hay personajes con ese ID");
-          });
-        return setCharacter({});
-      }, [detailId]);
+          }
+        })
+        .catch((err) => {
+          alert("No hay personajes con ese ID");
+        });
+      return setCharacter({});
+    }, [detailId])
 
     return(
         <div>

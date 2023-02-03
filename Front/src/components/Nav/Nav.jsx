@@ -8,6 +8,7 @@ const Nav = ({onSearch}) => {
                 <Link to="/">Log Out</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/home'>Home</Link>
+                <Link to='/favorites'>Favorites</Link>
             </div>
                 <SearchBar onSearch={onSearch}/>
         </nav>
